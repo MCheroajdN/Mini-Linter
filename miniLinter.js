@@ -35,7 +35,6 @@ console.log(betterWords);
 console.log(betterWords.length)
 */
 
-
 //to count overused words and log it to check
 
 //METHOD 1: This will give the total of the overusedWords
@@ -69,7 +68,6 @@ for (word of storyWords) {
   }
   }
      } ;
-     
 console.log("really is:", reallyCounter);
 console.log("very is:", veryCounter);
 console.log("basically is:", basicallyCounter);
@@ -83,8 +81,8 @@ storyWords.forEach(word => { // OR for (word of storyWords){}
   }
 });
 
-console.log(sentencesCounter);
-
+//console.log(sentencesCounter);
+/*
 //log word count, sentence count and number of  times overused words
 
 console.log(`There are ${storyWords.length} word count`)
@@ -92,11 +90,32 @@ console.log(`There are ${sentencesCounter} sentence count`)
 console.log(`The overused word really appears ${reallyCounter}`)
 console.log(`The overused word very appears ${veryCounter}`);
 console.log(`The overused word basically appears ${basicallyCounter}`)
-
+*/
 //OR
 //console.log(betterWords.length + ",  " + sentencesCounter + ", " + overusedWordsCounter);
+
+//OR
+// function to log the items
+const logInfo = (param1, param2, param3, param4, param5) => {
+    // param1 = storyWords.length;, param2 = sentencesCounter; etc
+
+    //word count
+   console.log("word Count is :" + param1);
+
+    //sentence count
+    console.log(`There are ${param2} sentences count`)
+    
+    //each overused words count    
+    console.log("really appears :" + param3);
+    console.log("very appears :" + param4);
+    console.log("basically appears :" + param5);
+  };
+
+  //passing in arguments
+logInfo( storyWords.length, sentencesCounter, reallyCounter, veryCounter, basicallyCounter) 
 
 
 //to log betterwords array as single string
 console.log(betterWords.join(" "));
+
 
